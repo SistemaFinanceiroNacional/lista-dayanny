@@ -9,14 +9,17 @@ Original file is located at
 Exercício 38
 """
 
-print ('Digite um código:')
-codigo = int(input('código:'))
+print('Digite o usuário:')
+codigo = str(input('Usuário:'))
+print('Digite a senha:')
+senha = str(input('Senha:'))
 
-if (codigo != 1234):
-  print ('Usuário inválido!')
+if (codigo != '1234') and (senha != '9999'):
+    print('Usuário inválido')
+    print('Senha incorreta')
+elif (codigo == '1234') and (senha != '9999'):
+    print('Senha incorreta')
+elif (codigo != '1234') and (senha == '9999'):
+    print('Usuário inválido')
 else:
-  senha = int(input('Digite a senha:'))
-  if (senha != 9999):
-    print('senha incorreta')
-  else:
     print('Acesso permitido')
